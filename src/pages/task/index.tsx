@@ -11,6 +11,10 @@ const task = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
 
+  const navigateToHome = () => {
+    router.push('/');
+  };
+
   const onAddTask = async () => {
     const task = {
       name: name,
@@ -24,7 +28,7 @@ const task = () => {
     const createdTask = await createTask(task);
  
     if(createdTask !== undefined) {
-      router.push('/');
+      navigateToHome();
     }
    };
 
@@ -52,6 +56,7 @@ const task = () => {
           </div>
           
           <CustomButton styles='mb-4' color="bg-indigo-600" text='Add Task' onClick={onAddTask} />
+          <CustomButton styles='mb-4' color="bg-rose-500" text='Back to tasks' onClick={navigateToHome} />
         </div>
 
       </div>
