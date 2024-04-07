@@ -1,19 +1,19 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-
 import styles from '../styles/Home.module.css'
+import { TasksContainer } from '../features/tasks/TasksContainer'
 
 const IndexPage: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Autority Challenge</title>
+        <title>Authority Challenge</title>
+        <meta name="description" content="Task management app" />
       </Head>
-      <header className={styles.header}>
-        <p>
-          Edit <code>src/App.tsx</code> for your logic
-        </p>
-      </header>
+
+      <main className='mx-auto max-w-md'>
+       <TasksContainer />
+      </main>
     </div>
   )
 }
