@@ -5,6 +5,7 @@ interface CustomButtonProps {
   text?: string;
   styles?: string;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
@@ -12,11 +13,12 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   text = '',
   styles = '',
   onClick = () => {},
+  disabled = false,
 }) => {
   const className = `h-11 w-full ${color} text-white text-xl font-bold rounded-lg font-['Inter'] ${styles}`;
 
   return (
-    <button className={className} onClick={onClick}>
+    <button className={className} onClick={onClick} disabled={disabled}>
       {text}
     </button>
   );
