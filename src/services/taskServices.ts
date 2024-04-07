@@ -24,6 +24,27 @@ export const getTasks = async () => {
   }
 }
 
+export const getTask = async (id: string) => {
+  try {
+    const response = await axiosInstance.get(`task/${id}`);
+    return response.data;
+
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+
+      console.error("Axios error data:", error.response?.data);
+      const errorMessage = error.response?.data?.message || 'Failed to fetch the task';
+      console.error("Axios error message:", errorMessage);
+
+    } else {
+
+      console.error("Non-Axios error:", error);
+      console.error('An unexpected error occurred');
+
+    }
+  }
+};
+
 export const createTask = async (task: Task) => {
   try {
     const response = await axiosInstance.post('task', task);

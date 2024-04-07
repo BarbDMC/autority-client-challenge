@@ -1,5 +1,5 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
+import type { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 import { TasksContainer } from '../features/tasks/TasksContainer'
 
@@ -18,4 +18,4 @@ const IndexPage: NextPage = () => {
   )
 }
 
-export default IndexPage
+export default IndexPage;
