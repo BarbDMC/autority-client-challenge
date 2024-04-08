@@ -28,18 +28,13 @@ export const TasksContainer = () => {
   };
 
   const onCompleteTask = async (task) => {
-    if (!task.isComplete) {
-      const updatedTask = { ...task, isComplete: true };
-      await updateTask(updatedTask);
+    const updatedTask = { ...task, isComplete: !task.isComplete };
+    await updateTask(updatedTask);
 
+    if (!task.isComplete) {
       setTasksToDo(tasksToDo.filter(taskToDo => taskToDo.id !== task.id));
       setTasksDone([...tasksDone, updatedTask]);
-    } 
-    
-    if (task.isComplete) {
-      const updatedTask = { ...task, isComplete: false };
-      await updateTask(updatedTask);
-
+    } else {
       setTasksDone(tasksDone.filter(taskDone => taskDone.id !== task.id));
       setTasksToDo([...tasksToDo, updatedTask]);
     }
