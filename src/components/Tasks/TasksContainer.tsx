@@ -20,8 +20,8 @@ export const TasksContainer = () => {
   const onGetTasks = async () => {
     const tasks = await getTasks();
 
-    const tasksToDo = tasks.filter(task => !task.isComplete);
-    const tasksDone = tasks.filter(task => task.isComplete);
+    const tasksToDo = tasks?.filter(task => !task.isComplete);
+    const tasksDone = tasks?.filter(task => task.isComplete);
 
     setTasksToDo(tasksToDo);
     setTasksDone(tasksDone);

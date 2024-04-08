@@ -11,9 +11,9 @@ const TasksList = ({ tasks, title, onDeleteTask, onCompleteTask }) => {
 
   return (
     <>
-      <h2 className="text-left text-xl text-gray-700 font-semibold mb-4">{title} - {tasks.length}</h2>
+      <h2 className="text-left text-xl text-gray-700 font-semibold mb-4">{title} - {tasks?.length || 0}</h2>
       
-      {tasks.map((task, index) => (
+      {tasks?.map((task, index) => (
         <div key={index} className="flex justify-between items-center w-full h-20 px-7 mb-5 rounded-xl bg-[#f9fafc]">
           
           <div className="inline-flex items-center">
