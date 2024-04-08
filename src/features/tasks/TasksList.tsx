@@ -17,7 +17,7 @@ const TasksList = ({ tasks, title, onDeleteTask, onCompleteTask }) => {
         <div key={index} className="flex justify-between items-center w-full h-20 px-7 mb-5 rounded-xl bg-[#f9fafc]">
           
           <div className="inline-flex items-center">
-            <input type="checkbox" className="w-6 h-6 rounded-full cursor-pointer" onClick={() => onCompleteTask(task)} checked={task.isComplete} />
+            <input type="checkbox" className="w-6 h-6 rounded-full cursor-pointer" onClick={() => onCompleteTask(task)} checked={task.isComplete } onChange={() => {}} />
             <span onClick={() => navigateToTask(task.id)} className={`ml-4 cursor-pointer hover:underline ${task.isComplete ? 'line-through' : ''}`}>{task.name}</span>
           </div>
 
@@ -25,6 +25,7 @@ const TasksList = ({ tasks, title, onDeleteTask, onCompleteTask }) => {
             className='cursor-pointer'
             src={deleteIcon}
             alt="My SVG"
+            data-testid="delete-icon"
             width={30}
             height={30}
             onClick={() => onDeleteTask(task.id)}
