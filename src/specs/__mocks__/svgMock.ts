@@ -1,0 +1,1 @@
+export default 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIyLjUgMTMuM2wtMi4yLTIuMmwtMi4yIDIuMmwyLjIgMi4yTDE2LjIgMTIuMmwyLjIgMi4yTDIyLjUgMTMuM3oiLz48L3N2Zz4=';
