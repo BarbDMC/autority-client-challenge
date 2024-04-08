@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 import { createTask } from '../../services/taskServices';
-import CustomButton from '../../features/CustomButton';
+import CustomButton from '../../components/CustomButton/CustomButton';
 
 const task = () => {
   const router = useRouter();

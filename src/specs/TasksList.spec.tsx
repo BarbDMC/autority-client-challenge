@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import TasksList from '../features/tasks/TasksList';
+import TasksList from '../components/Tasks/TasksList';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 

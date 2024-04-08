@@ -5,8 +5,8 @@ import { Task } from '../../interfaces/taskInterface'
 import { getTasks, updateTask, deleteTask } from '../../services/taskServices'
 
 import TasksList from './TasksList'
-import UserNameDisplay from '../UserNameDisplay'
-import CustomButton from '../CustomButton'
+import UserNameDisplay from '../UserNameDisplay/UserNameDisplay'
+import CustomButton from '../CustomButton/CustomButton'
 
 export const TasksContainer = () => {
   const router = useRouter();

@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import TaskInput from '../features/tasks/TaskInput';
+import TaskInput from '../components/Tasks/TaskInput';
 import { render, fireEvent } from '@testing-library/react';
 
 describe('TaskInput Component', () => {

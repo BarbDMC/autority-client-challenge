@@ -1,7 +1,7 @@
 
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import CustomButton from "../../features/CustomButton";
+import CustomButton from "../../components/CustomButton/CustomButton";
 import { getTask, updateTask } from '../../services/taskServices';
 import { Task } from '../../interfaces/taskInterface';
 

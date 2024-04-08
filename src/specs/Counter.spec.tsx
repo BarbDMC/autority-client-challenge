@@ -3,7 +3,7 @@ import user from '@testing-library/user-event'
 import { act } from 'react-dom/test-utils';
 import { render, screen } from '@testing-library/react'
 
-jest.mock('../features/counter-reference-redux/counterAPI', () => ({
+jest.mock('../components/counter-reference-redux/counterAPI', () => ({
   fetchCount: (amount: number) =>
     new Promise<{ data: number }>((resolve) =>
       setTimeout(() => resolve({ data: amount }), 500)
@@ -11,7 +11,7 @@ jest.mock('../features/counter-reference-redux/counterAPI', () => ({
 }))
 
 import { makeStore } from '../app/store'
-import Counter from '../features/counter-reference-redux/Counter'
+import Counter from '../components/counter-reference-redux/Counter'
 
 describe('<Counter />', () => {
   it('renders the component', () => {

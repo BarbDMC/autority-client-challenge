@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import UserNameDisplay from '../features/UserNameDisplay';
+import UserNameDisplay from '../components/UserNameDisplay/UserNameDisplay';
 
 describe('UserNameDisplay Component', () => {
   const userName = 'John Doe';

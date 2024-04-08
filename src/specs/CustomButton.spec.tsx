@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
-import CustomButton from '../features/CustomButton';
+import CustomButton from '../components/CustomButton/CustomButton';
 
 describe('CustomButton Component', () => {
   test('displays provided text', () => {
