@@ -3,6 +3,10 @@ import type { InitialOptionsTsJest } from 'ts-jest/dist/types'
 const config: InitialOptionsTsJest = {
   preset: 'ts-jest',
   setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
+  moduleNameMapper: {
+    '\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
+    '\\.svg$': '<rootDir>/src/specs/__mocks__/svgMock.ts',
+  },
   transform: {
     '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
   },
